@@ -1,0 +1,837 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu {
+  display: none;
+}
+
+.nav-bar {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.contact-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: px;
+}
+
+.hello-txt {
+  margin-bottom: 30px;
+  color: #ec5242;
+  font-size: 36px;
+}
+
+.cont-link {
+  font-family: "Lato", sans-serif;
+  color: #aca9a9;
+  transition: all 0.5s ease;
+}
+
+.cont-link:hover {
+  font-size: 1.2rem;
+  color: #ec5242;
+}
+
+.campaign {
+  color: #ec5242;
+  border: 2px solid #ec5242;
+  transition: all 0.82s ease;
+  padding: 2px 5px;
+}
+
+.campaign:hover {
+  background-color: #ec5242;
+  color: white;
+}
+
+.hamburger {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+}
+
+.line {
+  display: block;
+  background-color: #4b4848;
+  width: 26px;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  margin: 4px auto;
+}
+
+.company-name {
+  margin-left: -120px;
+  font-size: 17px;
+}
+
+.company-des {
+  text-transform: uppercase;
+  background-image:
+    linear-gradient(
+      -225deg,
+      #cd0606 0%,
+      #f19e19 29%,
+      #ff1361 67%,
+      #fff800 100%
+    );
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 40px;
+  margin-bottom: 20px;
+  line-height: 75px;
+  font-weight: bolder;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.company-des:hover {
+  background-position: left bottom;
+}
+
+.partners {
+  height: 38vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #4a4848;
+  padding: 1rem 0;
+}
+
+.partners h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.logos {
+  margin: 60px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+}
+
+.logo-icon {
+  color: #cec9c9;
+  font-weight: bold;
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-info {
+  height: 20vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin: auto 2rem;
+  padding: 2rem 0;
+}
+
+h5 {
+  width: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.footer-info p {
+  width: 50%;
+  text-align: start;
+  font-size: 0.85rem;
+}
+
+footer {
+  background-color: #edebebcb;
+}
+
+/* mobile version */
+@media (max-width: 768px) {
+  .company-name {
+    display: none;
+  }
+
+  .contact-menu {
+    display: flex;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: #272a31;
+    height: 100vh;
+    width: 100%;
+    padding: 65px;
+    transition: 0.5s;
+    filter: drop-shadow(20px);
+    opacity: 0.95;
+  }
+
+  .contact-menu.active {
+    left: 0;
+  }
+
+  .li-item {
+    margin: 15px 0;
+  }
+
+  .cont-link {
+    font-size: 33px;
+    font-weight: 598;
+    color: #fff;
+    line-height: 40px;
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translateY(11px);
+    background-color: #fff;
+  }
+
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11px);
+    background-color: #fff;
+  }
+
+  .line.active {
+    left: 0;
+  }
+
+  .watch {
+    background-color: #ec5242;
+    width: 250px;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    margin: 8px auto;
+    cursor: pointer;
+  }
+
+  .watch:hover {
+    background-color: #8f1f13;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+  }
+
+  .logo-icon {
+    width: 150px;
+  }
+
+  #speakers {
+    grid-template-columns: 1fr;
+  }
+
+  .phra1 {
+    display: none;
+  }
+
+  .past-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .past {
+    height: 89vh;
+  }
+}
+
+.about-sec {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.898),
+      rgba(202, 203, 209, 0.711)
+    ),
+    url("./images/USD-Cyber-Cybersecurity-vs-Information-Security-vs-Network-Security-_2.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-section {
+  padding: 48px 40px;
+}
+
+.about-box {
+  line-height: 25px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  padding: 15px;
+  width: 100%;
+  border: 2px solid #fff;
+  transition: 0.6s ease;
+}
+
+.foot-h2 {
+  margin-bottom: 20px;
+}
+
+/* Program Section */
+
+.main-program {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  padding: 40px 35px;
+  color: #fff;
+  gap: 13px;
+}
+
+.main-program h2 {
+  color: #fff;
+  text-align: center;
+}
+
+hr {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.prog-name {
+  margin-right: 30px;
+  color: #ec5242;
+  font-size: 20px;
+}
+
+aside {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 78px;
+  justify-content: space-between;
+  background-color: #2f333a;
+  padding: 10px 15px;
+  align-items: center;
+  transition: 0.5s ease-out;
+  cursor: pointer;
+}
+
+aside:hover {
+  border: 1px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.prog-img {
+  margin-right: 24px;
+  max-width: 20%;
+}
+
+.par-box {
+  font-size: 13px;
+  color: #fff;
+  max-width: 45%;
+}
+
+.feat-speakers {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  gap: 5px;
+}
+
+.feat-speakers h2 {
+  text-align: center;
+  color: #30343e;
+}
+
+.speakers-information {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.featured-speakers {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 2rem;
+}
+
+.featured-speakers h2 {
+  color: #272a31;
+  text-align: center;
+}
+
+.sp-information {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.sp-information:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+}
+
+.picture {
+  width: 120px;
+  height: 120px;
+}
+
+.details {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.details em {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  color: #ec5242;
+}
+
+.details p {
+  font-size: 10px;
+  margin-top: 0.5rem;
+}
+
+.see {
+  width: 100%;
+  padding: 1rem;
+  color: #ec5242;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.fa-angle-down {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.speakers-information:hover {
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.2);
+  transform: translateY(-0.5rem);
+  border: 1px solid #fff;
+}
+
+.speaker-details {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-details em {
+  font-size: 12px;
+  margin-top: 0.5rem;
+  color: #ec5242;
+}
+
+.speaker-details p {
+  font-size: 10px;
+  margin-top: 0.5rem;
+}
+
+.see-speak {
+  width: 100%;
+  padding: 1rem;
+  color: #ec5242;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Desktop Version */
+@media screen and (min-width: 768px) {
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #2f333a;
+    min-height: 28px;
+    margin: 0 0.375rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 40px;
+  }
+
+  .l-item {
+    color: #fff;
+    font-size: 13px;
+    margin: 0 0.375rem;
+  }
+
+  .nav-bar > a {
+    transition: all 0.5s ease-out;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    margin: 0 138px;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .contact-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .li-item {
+    padding-left: 10px;
+  }
+
+  .about-section {
+    padding: 4rem 10rem;
+  }
+
+  .company-des {
+    font-size: 3.5rem;
+  }
+
+  .about-box {
+    width: 600px;
+    line-height: 1.5;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .watch {
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+    text-decoration: underline;
+  }
+
+  .warpper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75vw;
+    margin: 0 auto;
+  }
+
+  .hi-sec {
+    height: 90vh;
+  }
+
+  .wlc {
+    font-size: 20px;
+  }
+
+  .headc {
+    font-size: 33px;
+    margin-top: 30px;
+  }
+
+  .phra1 {
+    padding: 15px 30px;
+    display: block;
+    width: 80%;
+    line-height: 1.7;
+    margin: 0.5rem auto;
+    background-color: #fff;
+    border: 2px solid #e7dbdb;
+    text-align: center;
+    font-size: 12.5px;
+    color: #2a2f3b;
+  }
+
+  .phra1:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.8rem);
+  }
+
+  .phra2 {
+    display: none;
+  }
+
+  .deteals-sec {
+    height: 55vh;
+  }
+
+  .img-det {
+    width: 50%;
+  }
+
+  .det-phar {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .past {
+    height: 60vh;
+  }
+
+  .past-icon {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .past-img {
+    margin: 2rem 0;
+  }
+}
+
+.hi-sec {
+  height: 63vh;
+  padding: 5px 20px;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.842),
+      rgba(202, 203, 209, 0.7)
+    ),
+    url("./images/Cybersecurity.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.wlc {
+  padding-top: 45px;
+  text-align: center;
+  line-height: 1.5;
+  color: #ec5242;
+  margin-bottom: 15px;
+}
+
+.headc {
+  font-family: "COCOGOOSE", sans-serif;
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: #b93223;
+  text-align: center;
+  font-weight: 700;
+}
+
+.phra2 {
+  border: 2px solid #e5e5e5;
+  width: 76%;
+  margin-top: 10px;
+  color: #1f2229;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 0.4rem 0.8rem;
+  margin-left: 50px;
+}
+
+.phra2:hover {
+  box-shadow: 0 0.5rem 1rem rgba(15, 15, 15, 0.2);
+  transform: translateY(-0.8rem);
+}
+
+.phar-cont {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  gap: 6px;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.7;
+}
+
+.eml {
+  border-bottom: 1px solid #272a31;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #2e3036;
+  font-size: 13px;
+  transition: 0.5s ease-out;
+  font-weight: 700;
+}
+
+.eml:hover {
+  color: #b93223;
+  font-size: 10px;
+}
+
+.deteals-sec {
+  height: 60vh;
+  background-color: white;
+  padding: 20px 0;
+}
+
+.head-det {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.det-phar {
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0.5rem 2rem;
+}
+
+.cyber-img {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  width: 90%;
+  height: 150px;
+  transition: 0.5s ease-out;
+  align-items: center;
+  margin: 20px auto;
+  border: 2px solid #e5e5e5;
+}
+
+.cyber-img:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-0.8rem);
+}
+
+.img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.past h2 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.past p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 0.8rem;
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.past-img {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 200px;
+  justify-content: center;
+  background-image:
+    linear-gradient(
+      rgba(167, 27, 27, 0.842),
+      rgba(230, 57, 57, 0.7)
+    ),
+    url("./images/iStock-901609212-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transition: 0.5s ease-out;
+  align-items: center;
+}
+
+.past-img:hover {
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.first-sec {
+  margin: 15px;
+}
+
+.cont-inf {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.img-det {
+  display: flex;
+  height: 150px;
+  border: 2px solid #e3dede;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 22px auto;
+}
+
+.cyper-icon {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.foot-about {
+  background-color: #2e2826;
+}
+
+.fot p {
+  text-align: start;
+  width: 50%;
+  color: #fff;
+  font-size: 14px;
+}
+
+.fot h5 {
+  font-size: 20px;
+  width: 50%;
+  color: #fff;
+  text-align: center;
+}
