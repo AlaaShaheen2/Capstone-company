@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ukaypromise/Personal-Portfolio.git"
+    "url": "git+https://github.com/AlaaShaheen2/Capstone-company.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Ukaypromise/Personal-Portfolio/issues"
+    "url": "https://github.com/AlaaShaheen2/Capstone-company/issues"
   },
-  "homepage": "https://github.com/Ukaypromise/Personal-Portfolio#readme",
+  "homepage": "https://github.com/AlaaShaheen2/Capstone-company#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
